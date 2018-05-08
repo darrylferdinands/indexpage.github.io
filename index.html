@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <title>Gramover</title>
+  <link rel="stylesheet" href="style1.css">
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="horizontal.css">
+
+</head>
+<body style="font-family: 'Alegreya', sans-serif; font-size: 15px;">
+
+<nav class="navbar navbar-expand-lg navbar-default navbar-fixed-top scrolling-navbar" style="background-color: white;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      
+      <a class="navbar-brand" href="index2.html"> 
+      <img src="skymet logo.png" style="display: inline-block; height: 125%;">
+      <span style="display: inline-block;"> </span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a class="navbar-brand" href="#" style="color: #00cc99; background-color: default; text-shadow: 2px;font-family: 'Alegreya', serif;font-size: 17px; margin-left: 30px;"><img src="dashboard.png" style="display: inline-block; height: 145%;">Dashboard</a></li>
+        <li><a class="navbar-brand" href="#" style="background-color: default;font-family: 'Alegreya',serif;font-size:17px; margin-left: 30px;"><img src="userguide.png" style="display: inline-block; height: 145%;">User Guide</a></li>
+        <li><a class="navbar-brand" href="#" style="background-color: default;font-family: 'Alegreya', serif;font-size: 17px;"><img src="def.png" style="display: inline-block; height: 145%;margin-left: 30px;">Definitions</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+<div class="flex-container1">
+
+<div class="col-sm-12 col-lg-6 filter">
+<h5 style="font-size: 18px;">Filter: </h5> <br>
+ Crop:
+  <select id="crop" name="crop">
+     <option>Paddy</option>
+     <option>Guar</option>
+     <option>Cotton</option>
+     <option>Maize</option>
+     <option>Cowpea</option>
+     <option>Bajra</option>
+</select>
+State:
+<select id="state" name="state">
+    <option>Uttar Pradesh</option>
+      <option>Jharkhand</option>
+      <option>Haryana</option>
+      <option>Punjab</option>
+      <option>Rajasthan</option>
+      <option>Gujarat</option>
+   
+</select>
+District:
+<select id="district" name="district">
+    <option>Hardoi</option>
+      <option>Fatehpur</option>
+      <option>Bulandsheher</option>
+      <option>Faizabad</option>
+      <option>Gorakhpur</option>
+      <option>Goda</option> 
+</select> 
+<label class="container2">Graphical
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container2">Listing
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+</div>
+
+<div class="col-sm-12 lg-6 date">
+<h5 style="font-size: 18px;">Select Date: </h5> <br>
+<input type="date" name="random">
+<input type="Submit" value="Display">
+<div class="datecheck">
+<label class="container3">5th Sep 2018
+  <input type="radio" checked="checked" name="radio1">
+  <span class="checkmark1"></span>
+</label>
+<label class="container3">24th Sep 2018
+  <input type="radio" name="radio1">
+  <span class="checkmark1"></span>
+</label>
+<label class="container3">9th Oct 2018
+  <input type="radio" checked="checked" name="radio1">
+  <span class="checkmark1"></span>
+</label>
+<label class="container3">15th Oct 2018
+  <input type="radio" name="radio1">
+  <span class="checkmark1"></span>
+</label>
+<label class="container3">23rd Nov 2018
+  <input type="radio" checked="checked" name="radio1">
+  <span class="checkmark1"></span>
+</label>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+
+
+<div class="container-fluid">
+  <div class="row">
+<div class="chart-container"> 
+      <div class="col-sm-6"><div class="well">
+    <canvas id="bar-chartcanvas"></canvas></div>
+  </div>
+<div class="col-sm-6"><div class="well">
+  <canvas id="horizontal_canvas"></canvas></div>
+</div></div>
+</div></div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+<div id="container7"></div></div>
+   <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="panel panel-default panel-table">
+              <div class="panel-body">
+                <table class="table  table-list">
+                  <thead>
+                    <tr>
+                        <th>States</th>
+                        <th>Districts</th>
+                        <th>Village</th>
+                        <th>Crop Stage</th>
+                        <th>Image</th>
+                    </tr> 
+                  </thead>
+                  <tbody>
+                          <tr>
+                            <td>West Bengal</td>
+                            <td>Birbhum</td>
+                            <td>Sirsa</td>
+                            <td>Harvested</td>
+                            <td><a href="crop-1.jpg">
+  <img src="crop-1.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+</a></td>
+                          </tr>
+                          <tr>
+                            <td>West Bengal</td>
+                            <td>Birbhum</td>
+                            <td>Gopinath</td>
+                            <td>Harvested</td>
+                            <td><a href="crop-2.jpg">
+  <img src="crop-2.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+</a></td>
+                          </tr>
+                          <tr>
+                           <td>West Bengal</td>
+                            <td>Birbhum</td>
+                            <td>Bhimrut</td>
+                            <td>Harvested</td>
+                            <td><a href="crop-3.jpg">
+  <img src="crop-3.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+</a></td>
+                          </tr>
+                          <tr>
+                            <td>West Bengal</td>
+                            <td>Birbhum</td>
+                            <td>Rupsimul</td>
+                            <td>Harvested</td>
+                            <td><a href="crop-4.jpg">
+  <img src="crop-4.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+</a></td>
+                          </tr>
+                          <tr>
+                           <td>West Bengal</td>
+                            <td>Birbhum</td>
+                            <td>Dumrut</td>
+                            <td>Harvested</td>
+                            <td><a href="crop-5.jpg">
+  <img src="crop-5.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+</a></td>
+                          </tr>
+                        </tbody>
+                </table>
+            
+              </div>
+              <div class="panel-footer">
+                <div class="row">
+                  <div class="col col-xs-6">Page 1 of 5
+                  </div>
+                  <div class="col col-xs-6">
+                    <ul class="pagination hidden-xs pull-right">
+                      <li><a href="#">1</a></li>
+                      <li><a href="#">2</a></li>
+                      <li><a href="#">3</a></li>
+                      <li><a href="#">4</a></li>
+                      <li><a href="#">5</a></li>
+                    </ul>
+                    <ul class="pagination visible-xs pull-right">
+                        <li><a href="#">«</a></li>
+                        <li><a href="#">»</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+</div>
+
+</div></div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6"><div class="well">
+      <canvas id="myChart"></canvas>
+<h4 style="font-size: 14px; color: grey;">Risk distribution of Rainfall Status (according to crop calendar) in the various states, different colours in each bar indicate number of districts in respective risk categories in a particular state.</h4>
+    </div>
+    </div>
+    <div class="col-sm-6"><div class="well">
+      <canvas id="myChart1"></canvas>
+<h4 style="font-size: 14px; color: grey;">It shows risk distribution of dry spells in different states, different colours in each bar indicate number of districts in respective risk categories in a particular state.</h4>
+    </div>
+    </div></div></div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6"><div class="well">
+      <canvas id="myChart2"></canvas>
+<h4 style="font-size: 14px; color: grey;">It shows risk distribution of wet spells in different states, different colours in each bar indicate number of districts in respective risk categories in a particular state.</h4>
+    </div>
+    </div>
+    <div class="col-sm-6"><div class="well">
+      <canvas id="myChart3"></canvas>
+     <h4 style="font-size: 14px; color: grey;">Risk distribution of Rainfall Status (according to crop calendar) in the various states, different colours in each bar indicate number of districts in respective risk categories in a particular state.</h4>
+    </div>
+    </div></div></div>
+
+ <script src="js/jquery.min.js"></script>
+	<script src="js/utils.js"></script>
+ <script src="js/Chart.bundle.js"></script>
+    <script src="js/Chart.min.js"></script>
+    
+<script src="js/bar.js"></script>
+<script src="js/index4.js"></script>
+  <script src="js/index3.js"></script>
+   <script  src="js/index2.js"></script>
+  <script  src="js/index1.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
