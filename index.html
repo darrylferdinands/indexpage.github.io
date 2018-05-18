@@ -28,21 +28,147 @@
       </button>
       
       <a class="navbar-brand" href="index2.html"> 
-      <img src="skymet logo.png" style="display: inline-block; height: 125%;">
+      <img src="photos/skymet logo.png" style="display: inline-block; height: 125%;">
       <span style="display: inline-block;"> </span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a class="navbar-brand" href="#" style="color: #00cc99; background-color: default; text-shadow: 2px;font-family: 'Alegreya', serif;font-size: 17px; margin-left: 30px;"><img src="dashboard.png" style="display: inline-block; height: 145%;">Dashboard</a></li>
-        <li><a class="navbar-brand" href="#" style="background-color: default;font-family: 'Alegreya',serif;font-size:17px; margin-left: 30px;"><img src="userguide.png" style="display: inline-block; height: 145%;">User Guide</a></li>
-        <li><a class="navbar-brand" href="#" style="background-color: default;font-family: 'Alegreya', serif;font-size: 17px;"><img src="def.png" style="display: inline-block; height: 145%;margin-left: 30px;">Definitions</a></li>
+        <li><a class="navbar-brand" href="#" style="color: #00cc99; background-color: default; text-shadow: 2px;font-family: 'Alegreya', serif;font-size: 17px; margin-left: 30px;"><img src="photos/dashboard.png" style="display: inline-block; height: 145%;">Dashboard</a></li>
+        <li><a class="navbar-brand" href="#" style="background-color: default;font-family: 'Alegreya',serif;font-size:17px; margin-left: 30px;"><img src="photos/userguide.png" style="display: inline-block; height: 145%;">User Guide</a></li>
+        <li><a class="navbar-brand" href="#" style="background-color: default;font-family: 'Alegreya', serif;font-size: 17px;"><img src="photos/def.png" style="display: inline-block; height: 145%;margin-left: 30px;">Definitions</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="container-fluid">
+
+<br><br><br>
+
+<div class="container-fluid" style="background-color: white; border-radius: 10px;" >
+  
   <div class="row">
+<div class="mainarea col-md-6" style="padding: 5px;">Filter:
+  <form action="#">
+    <fieldset>
+      <div class="chooseOptions">
+        <div class="row">
+        
+        <div class="form-group col-xs-6 col-md-3 cropYear">
+
+        <span>  <label for="crop"> Crop </label></span>
+        
+          <select class="form-control" id="crop">
+            
+            <option selected> Paddy </option>
+            <option> Guar </option>
+            <option> Cotton </option>
+            <option> Maize </option>
+            <option> Cowpea </option>
+            <option> Bajra </option>
+          </select>
+        </div>
+
+        <div class="form-group col-xs-6 col-md-3 cropYear">
+        <span>  <label for="state">State</label> </span>
+        
+          <select class="form-control" id="state">
+            <option selected> Uttar Pradesh </option>
+            <option> Jharkhand </option>
+            <option> Punjab </option>
+            <option> Haryana </option>
+            <option> Rajasthan </option>
+            <option> Gujarat </option>
+          </select>
+        </div>
+
+        <div class="form-group col-xs-6 col-md-3 cropYear">
+        <span>  <label for="district">District</label>  </span>
+          <select class="form-control" id="district">
+            <option selected> Bulandshahr </option>
+            <option> Hardoi </option>
+            <option> Fatehpur </option>
+            <option> Faizabad </option>
+            <option> Gorakhpur </option>
+          </select>
+        </div>
+               
+
+                      <div class="form-group col-xs-6 col-md-3 cropYear">
+        <span>  <label for="alldata">All Data</label>  </span>
+        
+          <select class="form-control" id="alldata">
+            <option selected> 1 </option>
+            <option> 2 </option>
+            <option> 3 </option>
+            <option> 4 </option>
+            <option> 5 </option>
+          </select>
+        </div>
+       
+       <div class="form-group col-xs-6 col-md-12 cropYear">
+        <form action=""><span>
+        <input type="radio" name="graphical" value="graphical" checked> 
+        Graphical </span> &emsp;
+        <span>
+        <input type="radio" name="graphical" value="listing">
+        Listing </span>
+      </form>
+      </div></div></div></fieldset></form></div>
+
+
+<div class="col-md-6" style="background-color: white;">
+  <span style="margin-top: 30px;"> Choose Date: </span>
+<nav class="navbar navbar-default" style="background-color: white;">
+  
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar2">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>   
+
+      </button> 
+      
+    </div>
+    <div class="col-collapse navbar-collapse" id="myNavbar2">
+      <div class="form-group col-md-12" style="margin-top: 5px;">
+        <input class="form-control" type="date" name="dating" value="dateing">
+      </div>
+
+
+
+      <ul class="nav navbar-nav" >
+        <li> 
+        <input type="radio" name="dated" value="date1"> 12th Jan 2018
+        </li> &nbsp;
+        <li>
+          <input type="radio" name="dated" value="date2"> 6th Feb 2018
+        </li> &nbsp;
+        <li>
+          <input type="radio" name="dated" value="date3"> 25th Feb 2018
+        </li> &nbsp;
+        <li>
+          <input type="radio" name="dated" value="date4"> 16th Mar 2018
+        </li> &nbsp;
+        <li>
+          <input type="radio" name="dated" value="date5"> 27th Mar 2018
+        </li> &nbsp;
+        <li>
+          <input type="radio" name="dated" value="date6"> 4th Apr 2018
+        </li> &nbsp;
+        <li>
+          <input type="radio" name="dated" value="date7"> 18th May 2018
+        </li> &nbsp;
+        <li>
+          <input type="radio" name="dated" value="date8"> 7th Jun 2018
+        </li>
+        
+      </ul>
+    </div>
+  
+</nav></div>
+
+      </div></div>
+  <!-- <div class="row">
 <div class="flex-container1">
 
 <div class="col-sm-12 col-lg-6 filter">
@@ -115,7 +241,7 @@ District:
 </div>
 </div>
 </div>
-</div>
+</div> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
@@ -159,8 +285,8 @@ District:
                             <td>Birbhum</td>
                             <td>Sirsa</td>
                             <td>Harvested</td>
-                            <td><a href="crop-1.jpg">
-  <img src="crop-1.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+                            <td><a href="photos/crop-1.jpg">
+  <img src="photos/crop-1.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
 </a></td>
                           </tr>
                           <tr>
@@ -168,8 +294,8 @@ District:
                             <td>Birbhum</td>
                             <td>Gopinath</td>
                             <td>Harvested</td>
-                            <td><a href="crop-2.jpg">
-  <img src="crop-2.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+                            <td><a href="photos/crop-2.jpg">
+  <img src="photos/crop-2.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
 </a></td>
                           </tr>
                           <tr>
@@ -177,8 +303,8 @@ District:
                             <td>Birbhum</td>
                             <td>Bhimrut</td>
                             <td>Harvested</td>
-                            <td><a href="crop-3.jpg">
-  <img src="crop-3.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+                            <td><a href="photos/crop-3.jpg">
+  <img src="photos/crop-3.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
 </a></td>
                           </tr>
                           <tr>
@@ -186,8 +312,8 @@ District:
                             <td>Birbhum</td>
                             <td>Rupsimul</td>
                             <td>Harvested</td>
-                            <td><a href="crop-4.jpg">
-  <img src="crop-4.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+                            <td><a href="photos/crop-4.jpg">
+  <img src="photos/crop-4.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
 </a></td>
                           </tr>
                           <tr>
@@ -195,8 +321,8 @@ District:
                             <td>Birbhum</td>
                             <td>Dumrut</td>
                             <td>Harvested</td>
-                            <td><a href="crop-5.jpg">
-  <img src="crop-5.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
+                            <td><a href="photos/crop-5.jpg">
+  <img src="photos/crop-5.jpg" alt="Forest" style="width: 0 margin auto; height: 40px; border-radius: 10px;">
 </a></td>
                           </tr>
                         </tbody>
